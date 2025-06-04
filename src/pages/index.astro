@@ -1,11 +1,35 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import HeroHome from '../components/HeroHome.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
 ---
 
 <Layout>
-	<Welcome />
+<HeroHome />
+	<main >
+		<section class="container mx-auto max-w-5xl my-32 text-center">
+			<h1 class="font-bold text-5xl text-claro-3 my-5 ">¿Qué son las Fintech?</h1>
+			<p class="font-normal text-lg text-white ">Según la Comisión Nacional de Mercado y Valores, la palabra Fintech nace de las palabras en ingles Finance and Technology y estas hace referencia a todas aquellas actividades que implique el uso de herramientas tecnológicas en búsqueda del desarrollo y la innovación de los productos y servicios financieros. Las empresas Fintech suelen ser startups que utilizan software y algoritmos modernos para proporcionar servicios financieros más eficientes y accesibles (Comisión Nacional del Mercado de Valores España, 2023).</p>
+		</section>
+		
+		<section class="bg-secondary my-32 p-10 ">
+			<div class="px-30 grid grid-cols-2 min-w-full gap-10 ">
+				<div class="text-center">
+					<h4 class="font-bold text-2xl text-background-1 mb-2">Billeteras Electrónicas</h4>
+					<p>En general existen muchas definiciones y delimitaciones sobre el concepto de Fintech a nivel mundial y cada país dispone de diferentes leyes y regulaciones, estas pueden cambian levemente su definición.</p>
+				</div>
+				<div class="text-center"	>
+					<h4 class="font-bold text-2xl text-background-1 mb-2">Pagos Digitales</h4>
+					<p>En general existen muchas definiciones y delimitaciones sobre el concepto de Fintech a nivel mundial y cada país dispone de diferentes leyes y regulaciones, estas pueden cambian levemente su definición.</p>
+				</div>
+			</div>
+		</section>
+		<section class="container mx-auto max-w-5xl my-32 bg-background-1 rounded-sm p-20 border-2 border-border text-center">
+			<h1 class="font-bold text-5xl text-claro-3 my-5 ">¿Las Fintech son seguras?</h1>
+			<p class="font-normal text-lg text-white ">En general existen muchas definiciones y delimitaciones sobre el concepto de Fintech a nivel mundial y cada país dispone de diferentes leyes y regulaciones, estas pueden cambian levemente su definición. Pero de manera general podemos simplificar el concepto de Fintech como toda aquella herramienta o solución innovadora que utilice medios tecnológicos que facilite la implementación de servicios financieros, siendo el proveedor de esta misma, aunque no de forma estricta, externo al sector financiero tradicional.</p>
+			
+		</section>
+	</main>
+	
 </Layout>

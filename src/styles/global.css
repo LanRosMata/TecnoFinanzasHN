@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+
+
+html {
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #0e2019;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+@theme {
+  --color-primary: #54b381;
+  --color-secondary: #237851;
+  --color-accent: #ff4081;
+  --color-background-1: #0e2019;
+  --color-background-2: #133819;
+  --color-border: #184d36;
+  --color-claro-1: #effaf3;
+  --color-claro-2: #d9f2e1;
+  --color-claro-3: #27C039;
+  --color-barra-1: #187D25;
+}
