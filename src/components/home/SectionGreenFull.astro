@@ -1,0 +1,23 @@
+---
+
+---
+
+<section class="sectionGreen bg-secondary my-32 p-10 ">
+  <div class="lg:px-30 grid grid-cols-1 lg:grid-cols-2 min-w-full gap-10 ">
+    <slot />
+  </div>
+</section>
+
+<script>
+  import { gsap } from 'gsap';
+	 gsap.from(".sectionGreen", { 
+     duration: 1, 
+     scaleY: 0,
+	 	 ease: "power3.out"
+   });
+</script>
+<style>
+  .sectionGreen{
+    overflow: hidden;
+  }
+</style>
