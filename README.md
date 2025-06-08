@@ -1,48 +1,73 @@
-# Astro Starter Kit: Basics
+# TecnoFinanzasHN - Portal informativo sobre finanzas y tecnología en Honduras
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este proyecto es un portal web diseñado para educar sobre tecnologías financieras (fintech) en Honduras, con un enfoque en crear conciencia sobre las soluciones digitales financieras disponibles en el país.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 📚 Contenido
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El portal ofrece información actualizada sobre:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- Introducción a tecnologías financieras (fintech)
+- Billeteras electrónicas y sistemas de pago digital
+- Seguridad en finanzas tecnológicas
+- Ecosistema fintech en Honduras
+- Blog con noticias y artículos relacionados
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Estructura del proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/             # Archivos estáticos
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── components/     # Componentes reutilizables
+│   ├── content/        # Colecciones de contenido
+│   │   ├── blog/       # Artículos del blog
+│   │   └── info/       # Artículos informativos
+│   ├── layouts/        # Plantillas de página
+│   ├── pages/          # Páginas y rutas
+│   ├── styles/         # Estilos globales
+│   └── utilities/      # Funciones de utilidad
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧰 Tecnologías utilizadas
 
-## 🧞 Commands
+- [Astro](https://astro.build) - Framework web con rendimiento optimizado
+- [Tailwind CSS](https://tailwindcss.com) - Framework de estilos utilitario
+- [GSAP](https://greensock.com/gsap/) - Biblioteca de animaciones
+- [TypeScript](https://www.typescriptlang.org/) - Tipado estático para JavaScript
 
-All commands are run from the root of the project, from a terminal:
+## 🧞 Comandos
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Comando                   | Acción                                            |
+| :------------------------ | :------------------------------------------------ |
+| `npm install`             | Instala dependencias                              |
+| `npm run dev`             | Inicia servidor local en `localhost:4321`         |
+| `npm run build`           | Compila el sitio para producción en dist     |
+| `npm run preview`         | Vista previa local de la compilación              |
+| `npm run astro ...`       | Ejecuta comandos CLI como `astro add`, `check`    |
 
-## 👀 Want to learn more?
+## 🔍 Características
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Diseño responsive optimizado para dispositivos móviles y de escritorio
+- Animaciones fluidas con GSAP para mejorar la experiencia de usuario
+- Sistema de contenido basado en colecciones para facilitar la gestión
+- Búsqueda por etiquetas para navegar temas relacionados
+- Secciones de artículos relacionados en páginas de contenido
+
+## 📝 Desarrollo
+
+1. Clona este repositorio
+2. Instala las dependencias: `npm install`
+3. Inicia el servidor de desarrollo: `npm run dev`
+4. Visita `localhost:4321` en tu navegador
+
+## 🌐 Despliegue
+
+Este sitio puede desplegarse en cualquier servicio compatible con sitios estáticos como:
+
+- [Netlify](https://netlify.com)
+- [Vercel](https://vercel.com)
+- [GitHub Pages](https://pages.github.com)
+
+## 📄 Licencia
+
