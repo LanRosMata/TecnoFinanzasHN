@@ -1,8 +1,8 @@
 ---
+id: fintechHonduras
 titulo: Las Fintech en Honduras
 autor: as
-descripcion: Están reguladas por el Banco Central y la Comisión Nacional de Bancos, que establecen límites de transacciones y normas de seguridad para proteger a los usuarios. El gobierno ha desarrollado leyes específicas para estas instituciones, prohibiendo actualmente el uso de criptomonedas en el sistema financiero nacional.
-imagen: img1.webp
+descripcion: En Honduras las Fintech están en marcadas bajo 2 normativas.
 lectura: 10
 fecha: 06/06/2025
 tags: [Honduras, INDEL, EPSPE, fintech]

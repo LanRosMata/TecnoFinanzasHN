@@ -1,4 +1,5 @@
 ---
+id: queFintech
 titulo: ¿Qué son las Fintech?
 autor: Allan Rosales
 descripcion: Las Fintech, término que proviene de la unión de las palabras inglesas "finance" (finanzas) y "technology" (tecnología), se refieren al uso de herramientas tecnológicas innovadoras para desarrollar y ofrecer productos y servicios financieros de manera más eficiente y accesible. Generalmente, son empresas, a menudo startups, que aplican software y algoritmos modernos para facilitar la implementación de servicios financieros, operando frecuentemente de forma externa al sector financiero tradicional, aunque la definición puede variar ligeramente según la regulación de cada país.

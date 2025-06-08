@@ -1,4 +1,5 @@
 ---
+id: fintechSeguras
 titulo: ¿Las Fintech son seguras?
 autor: as
 descripcion: La respuesta no es un simple sí o no, sino que requiere un análisis matizado. En general, muchas Fintech implementan robustas medidas de seguridad, a menudo a la par o incluso superando a las de instituciones financieras tradicionales. No obstante, como cualquier servicio digital que maneja información sensible y transacciones financieras, conllevan ciertos riesgos inherentes.El primer paso siempre será verificar la procedencia de la aplicación, la procedencia, reputación y respaldo de la empresa detrás de la aplicación, que este verificada y debidamente registrada.

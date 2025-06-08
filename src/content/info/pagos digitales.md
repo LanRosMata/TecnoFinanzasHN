@@ -1,4 +1,5 @@
 ---
+id: pagosDigitales
 titulo: Pagos Digitales
 autor: as
 descripcion: Son cualquier transacción en la que se transfiere valor monetario de una parte a otra utilizando medios electrónicos en lugar de efectivo físico o cheques. En el ámbito de las Fintech, este concepto se potencia mediante el uso de tecnologías innovadoras para hacer estos intercambios monetarios no solo digitales, sino también más rápidos, seguros, convenientes y accesibles a través de diversas plataformas y dispositivos, como aplicaciones móviles y billeteras electrónicas.

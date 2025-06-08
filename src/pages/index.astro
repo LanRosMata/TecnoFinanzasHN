@@ -1,96 +1,81 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeroHome from '../components/HeroHome.astro';
-import { getCollection } from 'astro:content';
+import Layout from "../layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro";
+import { getCollection } from "astro:content";
 
-import CardClean from '../components/home/CardClean.astro';
-import CardSubClean from '../components/home/CardSubClean.astro';
-import SectionGreenFull from '../components/home/SectionGreenFull.astro';
+import CardClean from "../components/home/CardClean.astro";
+import CardSubClean from "../components/home/CardSubClean.astro";
+import SectionGreenFull from "../components/home/SectionGreenFull.astro";
+import CardGreenFull from "../components/home/CardGreenFull.astro";
+import SectionContainerFullCards from "../components/home/SectionContainerFullCards.astro";
+import CardMiniGreen from "../components/home/CardMiniGreen.astro";
 
-const info = await getCollection('info');
-const queFintech = info[0];
-const billeteras = info[1];
-const pagos = info[2];
-const seguras = info[3];
-
+const info = await getCollection("info");
+const queFintech = info.filter((item) => item.data.id === "queFintech")[0];
+const billeteras = info.filter((item) => item.data.id === "billeterasElectronicas")[0];
+const pagos = info.filter((item) => item.data.id === "pagosDigitales")[0];
+const seguras = info.filter((item) => item.data.id === "fintechSeguras")[0];
+const fintecHonduras = info.filter((item) => item.data.id === "fintechHonduras")[0];
+const indel = info.filter((item) => item.data.id === "INDEL")[0];
+const epspe = info.filter((item) => item.data.id === "EPSPE")[0];
 
 ---
 
 <Layout>
-<HeroHome />
-	<main >
-		
-		<CardClean 
-			titulo={queFintech.data.titulo} 
-			descripcion={queFintech.data.descripcion} 
-			url={`/conocer-mas/${queFintech.slug}`} 
+  <HeroHome />
+  <main>
+    <CardClean
+      titulo={queFintech.data.titulo}
+      descripcion={queFintech.data.descripcion}
+      url={`/conocer-mas/${queFintech.slug}`}
+      btText="Más información"
+    />
+
+    <SectionGreenFull>
+      <CardSubClean
+        titulo={billeteras.data.titulo}
+        descripcion={billeteras.data.descripcion}
+        url={`/conocer-mas/${billeteras.slug}`}
+        btText="Más información"
+        ani="l"
+      />
+      <CardSubClean
+        titulo={pagos.data.titulo}
+        descripcion={pagos.data.descripcion}
+        url={`/conocer-mas/${pagos.slug}`}
+        btText="Más información"
+        ani="r"
+      />
+    </SectionGreenFull>
+
+		<CardGreenFull
+			titulo={seguras.data.titulo}
+			descripcion={seguras.data.descripcion}
+			url={`/conocer-mas/${seguras.slug}`}
 			btText="Más información"
 		/>
 		
-		<SectionGreenFull>
-			<CardSubClean 
-				titulo={billeteras.data.titulo} 
-				descripcion={billeteras.data.descripcion} 
-				url={`/conocer-mas/${billeteras.slug}`} 
-				btText="Más información"
-				ani="l"
-			/>
-			<CardSubClean 
-				titulo={pagos.data.titulo} 
-				descripcion={pagos.data.descripcion} 
-				url={`/conocer-mas/${pagos.slug}`} 
-				btText="Más información"
-				ani="r"
-			/>
-		</SectionGreenFull>
+    <SectionContainerFullCards 
+      titulo={fintecHonduras.data.titulo}
+      descripcion={fintecHonduras.data.descripcion}
+      url={`/conocer-mas/${fintecHonduras.slug}`}
+      btText="Más información"
+    >
+      <CardMiniGreen
+        titulo={indel.data.titulo}
+        descripcion={indel.data.descripcion}
+        url={`/conocer-mas/${indel.slug}`}
+        btText="Más información"
+      />
+      <CardMiniGreen
+        titulo={epspe.data.titulo}
+        descripcion={epspe.data.descripcion}
+        url={`/conocer-mas/${epspe.slug}`}
+        btText="Más información"
+      />
+    </SectionContainerFullCards>
 
-		<section class="container mx-auto max-w-5xl my-32 bg-background-1 rounded-sm p-20 border-2 border-border text-center">
-			<h1 class="font-bold text-5xl text-claro-3 my-5 ">{ seguras.data.titulo }</h1>
-			<p class="font-normal text-lg text-white ">{ seguras.data.descripcion }</p>
-			<a class="mt-5 bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded-md transition-colors duration-300 inline-block" href={`/conocer-mas/${seguras.slug}`}>Más información</a>
-			
-		</section>
-		<section class="container mx-auto max-w-5xl my-32 text-center">
-			<h1 class="font-bold text-5xl text-claro-3 my-5 ">Las Fintech en Honduras</h1>
-			<p class="font-normal text-lg text-white ">En Honduras podemos agrupar de 2 formas la empresas tecnológicas de aplicaciones financieras que no pertenecen al sistema tradicional y estas son:</p>
-			<div class="px-30 grid grid-cols-2 min-w-full gap-10 mt-5">
-				<div class="text-center bg-background-2 p-4 border-2 border-border rounded-lg text-white">
-					<h4 class="font-bold text-2xl  mb-2">INDEL</h4>
-					<p class="">En general existen muchas definiciones y delimitaciones sobre el concepto de Fintech a nivel mundial y cada país dispone de diferentes leyes y regulaciones, estas pueden cambian levemente su definición.</p>
-				</div>
-				<div class="text-center bg-white p-4 border-2 border-border rounded-lg"	>
-					<h4 class="font-bold text-2xl text-background-1 mb-2">EPSPE</h4>
-					<p class="text-black ">En general existen muchas definiciones y delimitaciones sobre el concepto de Fintech a nivel mundial y cada país dispone de diferentes leyes y regulaciones, estas pueden cambian levemente su definición.</p>
-				</div>
-			</div>
-		</section>
-		
-	</main>
-	
+  
+  </main>
 </Layout>
 
-<script>
-	// import { gsap } from 'gsap';
-	// import { SplitText } from "gsap/SplitText";
-
-	// gsap.registerPlugin(SplitText);
-
-	// const splitText = new SplitText(".text", {
-	// 	type: "words, chars, lines"
-	// });
-
-	// gsap.from(splitText.lines, {
-	// 	duration: 1,
-	// 	y: 25,
-	// 	opacity: 0,
-	// 	stagger: 0.2
-	// })
-
-	// gsap.from(".box", { 
-  //   duration: 1, 
-  //   y: 100, 
-  //   opacity: 0,
-	// 	stagger: 0.2, 
-	// 	ease: "power3.out"
-  // });
-</script>

@@ -1,0 +1,47 @@
+---
+import Boton from "../Boton.astro";
+const { titulo, descripcion, url, btText } = Astro.props;
+
+---
+
+<section class="container mx-auto max-w-5xl my-32 text-center px-10">
+  <h4 class="SectionContainerFullCards font-bold text-5xl text-claro-3 my-5">{titulo}</h4>
+  <p class="SectionContainerFullCards font-normal text-lg text-white">
+    { descripcion }
+  </p>
+  <Boton url={url} texto={btText} />
+  <div class="grid grid-cols-1 lg:grid-cols-2 w-full gap-10 mt-10">
+    <slot />
+  </div>
+</section>
+
+<script>
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger);
+
+const elementos = document.querySelectorAll(".SectionContainerFullCards");
+
+elementos.forEach((elemento, i) => {
+    const splitText = new SplitText(elemento, {
+			type: "words"
+		});
+		elemento.classList.remove("invisible-content");
+		gsap.from(splitText.words, {
+			scrollTrigger: {
+				trigger: splitText.words,
+				start: "top bottom",
+				end: "bottom top",
+				toggleActions: "play none none none",
+			},
+			duration: 0.2,
+			y: 10,
+			opacity: 0,
+			stagger: 0.1
+  });
+});
+
+</script>

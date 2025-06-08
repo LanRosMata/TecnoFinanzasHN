@@ -1,34 +1,55 @@
 ---
-import Boton from "../Boton.astro"
+import Boton from "../Boton.astro";
 const { titulo, descripcion, url, btText, ani } = Astro.props;
-const animation = ani === 'r' ? 'cardSub-r' : 'cardSub-l'
+const animation = ani === "r" ? "cardSub-r" : "cardSub-l";
 ---
+
 <div class={`${animation} text-center flex flex-col justify-between`}>
-  <h4 class="font-bold text-2xl text-background-1 mb-2">{titulo}</h4>
+  <h4 class="font-bold text-4xl text-background-1 mb-2">{titulo}</h4>
   <p>{descripcion}</p>
   <Boton url={url} texto={btText} />
 </div>
 
 <script>
-  import { gsap } from 'gsap';
-	 gsap.from(".cardSub-r", { 
-     duration: 2, 
-     xPercent: 100, 
-     autoAlpha: 0,
-	 	 stagger: 0.2, 
-	 	 ease: "power3.out",
-     delay: 0.5
-   });
-   	 gsap.from(".cardSub-l", { 
-     duration: 2, 
-     xPercent: -100, 
-     autoAlpha: 0,
-	 	 stagger: 0.2, 
-	 	 ease: "power3.out",
-     delay: 0.5
-   });
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  const elementosR = document.querySelectorAll(".cardSub-r");
+  const elementosL = document.querySelectorAll(".cardSub-l");
+
+  elementosR.forEach((elemento) => {
+    gsap.from(elemento, {
+      scrollTrigger: {
+        trigger: elemento,
+        start: "bottom bottom",
+        end: "bottom top",
+        toggleActions: "play none none none",
+      },
+      duration: 1,
+      xPercent: 100,
+      autoAlpha: 0,
+      stagger: 0.2,
+      ease: "power3.out",
+      delay: 0.5,
+    });
+  });
+  elementosL.forEach((elemento) => {
+    gsap.from(elemento, {
+      scrollTrigger: {
+        trigger: elemento,
+        start: "bottom bottom",
+        end: "bottom top",
+        toggleActions: "play none none none",
+      },
+      duration: 1,
+      xPercent: -100,
+      autoAlpha: 0,
+      stagger: 0.2,
+      ease: "power3.out",
+      delay: 0.5,
+    });
+  });
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,4 +1,5 @@
 ---
+id: billeterasElectronicas
 titulo: Billeteras Electrónicas
 autor: Allan Rosales
 descripcion: Es una aplicación de software o servicio en línea que opera dentro del ecosistema Fintech, permitiendo a los usuarios almacenar de forma segura su información de pago (como datos de tarjetas o cuentas) y credenciales para realizar transacciones financieras digitales. Estas herramientas facilitan pagos en comercios, transferencias entre personas y el pago de servicios, utilizando a menudo tecnologías como NFC o códigos QR, con el objetivo de simplificar las operaciones financieras y promover la inclusión digital.

@@ -1,0 +1,53 @@
+---
+import Boton from "../Boton.astro";
+const { titulo, descripcion, url, btText } = Astro.props;
+---
+
+<div
+  class="cardMiniGreen text-center bg-background-2 p-4 border-2 border-border rounded-lg text-white flex flex-col justify-between h-full"
+>
+  <h4 class="font-bold text-2xl mb-2">{ titulo }</h4>
+  <p class="">
+    { descripcion }
+  </p>
+  <Boton url={url} texto={btText} />
+</div>
+
+<script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger"; 
+gsap.registerPlugin(ScrollTrigger);
+const elementos = document.querySelectorAll(".cardMiniGreen");
+elementos.forEach((elemento, i) => {
+  gsap.from(elemento, {
+    scrollTrigger: {
+      trigger: elemento,
+      start: "bottom bottom",
+      end: "bottom top",
+      toggleActions: "play none none none",
+    },
+    duration: 0.5,
+    y: 50,
+    opacity: 0,
+    delay: i * 0.3,
+    stagger: 0.2,
+    ease: "power3.out",
+  });
+      const hoverAnim = gsap.to(elemento, {
+        scale: 1.1,
+        backgroundColor: "var(--color-background-1)", 
+        duration: 0.3,
+        paused: true, 
+        ease: "power2.out"
+    });
+
+    elemento.addEventListener('mouseenter', () => {
+        hoverAnim.play(); 
+    });
+
+
+    elemento.addEventListener('mouseleave', () => {
+        hoverAnim.reverse();
+    });
+});
+</script>
