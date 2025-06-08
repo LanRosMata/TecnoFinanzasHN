@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroGeneric from "../../components/HeroGeneric.astro";
+import CardPost from "../../components/CardPost.astro";
+import TagsShowInfo from "../../components/TagsShowInfo.astro";
+
+import { getCollection } from "astro:content";
+const info = await getCollection("info");
+
+
+---
+<Layout>
+  <HeroGeneric/>
+  <main class="container mx-auto max-w-5xl my-10 px-5">
+    <section class="mb-10">
+      <h1 class="font-bold text-4xl">Conocer Más</h1>
+      <p>
+        En esta sección encuentras toda la información relacionada con las Fintech en Honduras.
+      </p>
+      <p> 
+        Para que puedas conocer más sobre el pujante ecosistema de las tecnologías financieras que crece cada días más
+      </p>
+    </section>
+    <section>
+      <TagsShowInfo />
+    </section>
+    <section class="mt-6 w-full ">
+      <ul class="mx-4 space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-5">
+        {info.map((item) => (
+          <CardPost
+            titulo={item.data.titulo}
+            descripcion={item.data.descripcion}
+            imagen={`/src/${item.data.imagen}`}
+            tags={item.data.tags}
+            url={`/conocer-mas/${item.slug}`}
+          />
+        ))}
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  ul li {
+    list-style-type: none;
+    padding: 0;
+  }
+</style>

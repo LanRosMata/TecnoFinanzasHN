@@ -3,6 +3,7 @@ id: INDEL
 titulo: INDEL
 autor: Allan Rosales
 descripcion: Instituciones de Dinero Electrónico. Son entidades financieras no bancarias autorizadas para emitir y administrar dinero electrónico, facilitando así pagos, transferencias y otras transacciones de forma digital.
+imagen: blog/25/06/redes.jpg
 lectura: 10
 fecha: 06/06/2025
 tags: [INDEL]

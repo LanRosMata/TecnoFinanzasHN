@@ -9,6 +9,8 @@ import SectionGreenFull from "../components/home/SectionGreenFull.astro";
 import CardGreenFull from "../components/home/CardGreenFull.astro";
 import SectionContainerFullCards from "../components/home/SectionContainerFullCards.astro";
 import CardMiniGreen from "../components/home/CardMiniGreen.astro";
+import SectionMultiCardT from "../components/home/SectionMultiCardT.astro";
+import CardMiniTitulo from "../components/home/CardMiniTitulo.astro";
 
 const info = await getCollection("info");
 const queFintech = info.filter((item) => item.data.id === "queFintech")[0];
@@ -18,6 +20,10 @@ const seguras = info.filter((item) => item.data.id === "fintechSeguras")[0];
 const fintecHonduras = info.filter((item) => item.data.id === "fintechHonduras")[0];
 const indel = info.filter((item) => item.data.id === "INDEL")[0];
 const epspe = info.filter((item) => item.data.id === "EPSPE")[0];
+const SCfintech01 = info.filter((item) => item.data.id === "SCfintech01")[0];
+const SCfintech02 = info.filter((item) => item.data.id === "SCfintech02")[0];
+const SCfintech03 = info.filter((item) => item.data.id === "SCfintech03")[0];
+const SCfintech04 = info.filter((item) => item.data.id === "SCfintech04")[0];
 
 ---
 
@@ -75,6 +81,64 @@ const epspe = info.filter((item) => item.data.id === "EPSPE")[0];
       />
     </SectionContainerFullCards>
 
+    <SectionMultiCardT
+      titulo="Futuro Financiero Digital Seguro"
+    >
+      <CardMiniTitulo
+        titulo={SCfintech01.data.titulo}
+        url={`/conocer-mas/${SCfintech01.slug}`}
+        btText="Más información"
+      />
+      <CardMiniTitulo
+        titulo={SCfintech02.data.titulo}
+        url={`/conocer-mas/${SCfintech02.slug}`}
+        btText="Más información"
+      />
+      <CardMiniTitulo
+        titulo={SCfintech03.data.titulo}
+        url={`/conocer-mas/${SCfintech03.slug}`}
+        btText="Más información"
+      />
+      <CardMiniTitulo
+        titulo={SCfintech04.data.titulo}
+        url={`/conocer-mas/${SCfintech04.slug}`}
+        btText="Más información"
+      />
+    </SectionMultiCardT>
+    
+    <SectionContainerFullCards 
+    titulo="Descubre más información"
+    descripcion="Encuentra más articulos que pueden ser de ayuda e interés para ti en nuestro blog"
+    url={`/articulos`}
+    btText="Ir a Artículos"
+    >
+    </SectionContainerFullCards>
+
+    <SectionMultiCardT
+      titulo="Conoce más en los sitios oficiales"
+    >
+      <CardMiniTitulo
+        titulo="Comisión Nacional de Bancos y Seguros"
+        url="https://www.cnbs.gob.hn/"
+        btText="Ir al sitio"
+      />
+      <CardMiniTitulo
+        titulo="Hub de Innovación Financiera"
+        url="https://www.cnbs.gob.hn/hub-de-innovacion-financiera-de-honduras/"
+        btText="Ir al sitio"
+      />
+      <CardMiniTitulo
+        titulo="BCH INDEL"
+        url="https://www.bch.hn/politica-institucional/sistemas-de-pago/informacion-general/instituciones-no-bancarias-que-brindan-servicios-de-pago-utilizando-dinero-electr%C3%B3nico"
+        btText="Ir al sitio"
+      />
+      <CardMiniTitulo
+        titulo="BCH EPSPE"
+        url="https://www.bch.hn/acerca-del-bch/registro-especial-epspe"
+        btText="Ir al sitio"
+      />
+    </SectionMultiCardT>`
+    
   
   </main>
 </Layout>

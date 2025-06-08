@@ -3,6 +3,7 @@ id: EPSPE
 titulo: EPSPE
 autor: Allan Rosales
 descripcion: Entidades Proveedoras de Servicios de Pagos Electrónicos, son empresas que facilitan transacciones financieras digitales, como pasarelas de pago y procesamiento de colecturía, sin necesariamente emitir dinero electrónico. Deben estar registradas en el Banco Central de Honduras.
+imagen: blog/25/06/hombre-celular-tarjeta.jpg
 lectura: 10
 fecha: 06/06/2025
 tags: [EPSPE]

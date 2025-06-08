@@ -1,0 +1,10 @@
+---
+const { titulo } = Astro.props;
+---
+
+<section class="sectionGreen bg-background-1 my-32 p-10 flex flex-col items-center">
+  <h4 class="SectionContainerFullCards font-bold text-4xl text-white my-5 text-center">{titulo}</h4>
+    <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 w-full gap-10 mt-10">
+      <slot />
+    </div>
+</section>

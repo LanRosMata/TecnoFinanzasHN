@@ -1,33 +1,34 @@
 ---
-import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
-  const infos = await getCollection('info');
-  return infos.map((info) => ({
-    params: { id: info.slug },
-    props: { info, allInfos: infos },
+  const blogs = await getCollection('blog');
+  return blogs.map(blog => ({
+    params: { slug: blog.slug },
+    props: { blog, allblogs: blogs  },
   }));
 }
+const infos = await getCollection('info');
 
-const blog = await getCollection('blog');
-const { info, allInfos } = Astro.props;
-const { data } = info;
-const { titulo, descripcion, imagen, fecha, autor,tags } = data;
-const { Content } = await render(info)
+const { blog, allblogs } = Astro.props;
+const { data } = blog;
+const { titulo, descripcion, imagen, fecha, autor, tags } = data;
+const { Content } = await render(blog);
 
-const relatedEntries = allInfos
+const relatedEntries = allblogs
   .filter(entry => 
-    entry.slug !== info.slug && 
+    entry.slug !== blog.slug && 
     tags?.some(tag => entry.data.tags?.includes(tag))
   )
   .slice(0, 4);
 
-const relatedBlog = blog
+const relatedInfo = infos
   .filter(entry => 
     tags?.some(infoTag => entry.data.tags?.includes(infoTag))
   )
   .slice(0, 4);
+
 
 ---
 
@@ -72,18 +73,18 @@ const relatedBlog = blog
           relatedEntries.map((related) => (
             <div class="p-5 bg-background-2 rounded-lg">
               <p class="text-xl font-bold mb-2">{related.data.titulo}</p>
-              <a href={`/conocer-mas/${related.slug}`} class="text-primary hover:text-secondary transition-colors duration-300">Leer más</a>
+              <a href={`/articulos/${related.slug}`} class="text-primary hover:text-secondary transition-colors duration-300">Leer más</a>
             </div>
           ))
         }
       </div>
-      {relatedBlog.length > 0 && <h4 class="text-3xl font-bold my-10">Artículos de nuestro blog</h4>}
+      {relatedInfo.length > 0 && <h4 class="text-3xl font-bold my-10">Conoce más</h4>}
       <div class="flex flex-col lg:grid lg:grid-cols-2 gap-5">
         {
-          relatedBlog.map((related) => (
+          relatedInfo.map((related) => (
             <div class="p-5 bg-background-2 rounded-lg">
               <p class="text-xl font-bold mb-2">{related.data.titulo}</p>
-              <a href={`/articulos/${related.slug}`} class="text-primary hover:text-secondary transition-colors duration-300">Leer más</a>
+              <a href={`/conocer-mas/${related.slug}`} class="text-primary hover:text-secondary transition-colors duration-300">Leer más</a>
             </div>
           ))
         }
@@ -91,6 +92,3 @@ const relatedBlog = blog
     </section>
   </main>
 </Layout>
-
-<script>
-</script>

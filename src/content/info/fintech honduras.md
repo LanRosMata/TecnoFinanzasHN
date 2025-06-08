@@ -3,6 +3,7 @@ id: fintechHonduras
 titulo: Las Fintech en Honduras
 autor: as
 descripcion: En Honduras las Fintech están en marcadas bajo 2 normativas.
+imagen: img4.jpg
 lectura: 10
 fecha: 06/06/2025
 tags: [Honduras, INDEL, EPSPE, fintech]

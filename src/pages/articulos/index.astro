@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroGeneric from "../../components/HeroGeneric.astro";
+import CardPost from "../../components/CardPost.astro";
+import TagsShowBlog from "../../components/TagsShowBlog.astro";
+
+import { getCollection } from "astro:content";
+const blog = await getCollection("blog");
+
+
+---
+<Layout>
+  <HeroGeneric/>
+  <main class="container mx-auto max-w-5xl my-10 px-5">
+    <section class="mb-10">
+      <h1 class="font-bold text-4xl">Artículos</h1>
+      <p>
+        Conoce más información, ahonda más en los temas de tú interés y novedades en nuestro Blog.
+      </p>
+    </section>
+    <section>
+      <TagsShowBlog />
+    </section>
+    <section class="mt-6 w-full ">
+      <ul class="mx-4 space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-5">
+        {blog.map((item) => (
+          <CardPost
+            titulo={item.data.titulo}
+            descripcion={item.data.descripcion}
+            imagen={`/src/${item.data.imagen}`}
+            tags={item.data.tags}
+            url={`/articulos/${item.slug}`}
+          />
+        ))}
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  ul li {
+    list-style-type: none;
+    padding: 0;
+  }
+</style>

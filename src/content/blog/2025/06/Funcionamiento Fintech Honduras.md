@@ -1,13 +1,13 @@
 ---
 titulo: Funcionamiento de las Fintech en Honduras
 autor: Allan Rosales
-descripcion: as
-imagen: img2.jpeg
+descripcion: Profundizaremos en estos términos y sus diferencias que se encuentran en el ecosistema Fintech y las instituciones, enfocado en el panorama nacional y su legislación.
+imagen: blog/25/06/pago-celular.jpg
 lectura: 10
 fecha: 04/06/2025
 tags: [fintech, Honduras, CNBS, BCH, INDEL, EPSPE]
-
 ---
+
 
 ## Funcionamiento de las Fintech en Honduras
 En la siguiente sección tocaremos como tema las instituciones que intervienen en el ecosistema fintech del país para comprender como funciona y se conectan las unas con las otra.

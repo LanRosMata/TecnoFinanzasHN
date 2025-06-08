@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import { getAllTagsCombined } from '../../utilities/getAllTags';
+import Layout from '../../layouts/Layout.astro';
+import HeroGeneric from '../../components/HeroGeneric.astro';
+import CardPost from '../../components/CardPost.astro';
+import TagsShowALL from '../../components/TagsShowALL.astro';
+
+
+
+export async function getStaticPaths() {
+  const tags = (await getAllTagsCombined()).map((tag) => tag);
+  return tags.map(tag => ({ params: { slug: tag }, props: { tag }
+  }));
+}
+const { tag } = Astro.props;
+
+const infos = await getCollection('info', ({ data }) =>
+  data.tags?.map((data) => data.toLowerCase()).includes(tag.toLowerCase()));
+
+const blogs = await getCollection('blog', ({ data }) =>
+  data.tags?.map((data) => data.toLowerCase()).includes(tag.toLowerCase()));
+
+
+
+
+---
+
+<Layout>
+  <HeroGeneric/>
+  <main class="container mx-auto max-w-5xl my-10 px-5">
+    <section class="mb-10">
+      <h1 class="font-bold text-4xl">Etiquetas</h1>
+      <p>
+        Encuentra todos los temas de tu interés relacionados con una misma Etiqueta.
+      </p>
+      <p>Filtrando por: <strong>{tag}</strong></p>
+    </section>
+    <section>
+      <TagsShowALL />
+    </section>
+    <section class="mt-6 w-full ">
+      <ul class="mx-4 space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-5">
+        {infos.map((item) => (
+          <CardPost
+            titulo={item.data.titulo}
+            descripcion={item.data.descripcion}
+            imagen={`/src/${item.data.imagen}`}
+            tags={item.data.tags}
+            url={`/conocer-mas/${item.slug}`}
+          />
+        ))}
+          {blogs.map((item) => (
+          <CardPost
+            titulo={item.data.titulo}
+            descripcion={item.data.descripcion}
+            imagen={`/src/${item.data.imagen}`}
+            tags={item.data.tags}
+            url={`/articulos/${item.slug}`}
+          />
+        ))}
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  ul li {
+    list-style-type: none;
+    padding: 0;
+  }
+</style>
