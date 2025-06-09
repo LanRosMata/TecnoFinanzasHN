@@ -1,9 +1,9 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import HeroGeneric from "../../components/HeroGeneric.astro";
-import CardPost from "../../components/CardPost.astro";
-import TagsShowInfo from "../../components/TagsShowInfo.astro";
-import SubMenuConocerMas from "../../components/SubMenuConocerMas.astro";
+import Layout from "../layouts/Layout.astro";
+import HeroGeneric from "../components/HeroGeneric.astro";
+import CardPost from "../components/CardPost.astro";
+import TagsShowInfo from "../components/TagsShowInfo.astro";
+import SubMenuConocerMas from "../components/SubMenuConocerMas.astro";
 
 import { getCollection } from "astro:content";
 const info = await getCollection("info");
@@ -53,8 +53,31 @@ const info = await getCollection("info");
 </style>
 
 <script>
-  import searchFilter from '../../utilities/searchFilter'
-  searchFilter();
+  const lista = document.querySelectorAll('.tj-info');
+  const searchInput = document.getElementById('search');
+  const resultado = document.getElementById('resultado');
+
+  searchInput?.addEventListener('keyup', function(event) {
+    let matchCount = 0;
+    const query = event.target?.value.toLowerCase();
+
+    lista.forEach(item => {
+      const titulo = item.querySelector('.content-tit')?.textContent?.toLowerCase()
+      const descripcion = item.querySelector('.content-txt')?.textContent?.toLowerCase()
+      
+      if( titulo?.includes(query) || descripcion?.includes(query)){
+        item.style.display = 'block';
+        matchCount++
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    if(matchCount === 0){
+      resultado.textContent = "No hay resultados";
+    } else {
+      resultado.textContent = "Resultados encontrado: " + matchCount;
+    }
+  });
 </script>
 
 

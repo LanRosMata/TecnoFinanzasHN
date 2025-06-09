@@ -17,12 +17,17 @@ const blog = await getCollection("blog");
       <p>
         Conoce más información, ahonda más en los temas de tú interés y novedades en nuestro Blog.
       </p>
+      <div class="mt-4 mb-6">
+        <p class="text-xl">Filtrar:</p>
+        <input id="search" type="text" placeholder="Buscar..." class="border border-gray-300 rounded p-2 w-full" />
+      </div>
     </section>
     <section>
       <TagsShowBlog />
     </section>
     <section class="mt-6 w-full ">
-      <ul class="mx-4 space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <p id="resultado" class="my-5 min-h-7"></p>
+      <ul id="lista-data" class="mx-4 space-y-8 grid grid-cols-1 lg:grid-cols-2 gap-5">
         {blog.map((item) => (
           <CardPost
             titulo={item.data.titulo}
@@ -43,3 +48,10 @@ const blog = await getCollection("blog");
     padding: 0;
   }
 </style>
+
+<script>
+  import searchFilter from '../../utilities/searchFilter'
+  searchFilter();
+</script>
+
+

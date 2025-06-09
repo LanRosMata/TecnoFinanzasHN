@@ -6,11 +6,11 @@ const { titulo, detalles } = Astro.props;
 
 <li>
   <details
-        class="group border-s-4 border-primary bg-background-1 p-4 [&_summary::-webkit-details-marker]:hidden"
+        class="tj-info group border-s-4 border-primary bg-background-1 p-4 [&_summary::-webkit-details-marker]:hidden"
 
       >
         <summary class="flex items-center justify-between gap-1.5 text-white transition-colors duration-300 group-open:text-primary">
-          <h2 class="text-lg font-bold ">{ titulo }</h2>
+          <h4 class="content-tit text-lg font-bold ">{ titulo }</h4>
     
           <svg
             class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
@@ -23,7 +23,7 @@ const { titulo, detalles } = Astro.props;
           </svg>
         </summary>
     
-        <p class="pt-4 text-white">
+        <p class="content-txt pt-4 text-white">
           { detalles }
         </p>
       </details>
