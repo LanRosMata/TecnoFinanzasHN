@@ -13,14 +13,15 @@ La palabra proviene de la unión de cripto y moneda, refiriéndose un token encr
 Hay 2 forma de obtener Criptomonedas, una seria realizando una compra pasando de dinero normal a cripto. La segunda forma sería por medio del minado. Como vimos las criptomonedas son tokens encriptados que se almacenan en bloques y una forma legal de obtener tokens es mediante la minería de los mismos; este método consiste en la adquisición de un bloque cifrado con un problema algorítmico altamente complejo. Me mediante la computación, utilizando toda la capacidad de procesamiento y tarjetas de video, una maquina busca resolver este problema algorítmico, si la computadora logra resolverlo y descifrar el bloque, la persona dueña obtiene el derecho de registrar su nombre en el bloque junto a una recompensa en valor de la criptomoneda, luego este bloque se agrega a todos los libros mayores y se cierra de forma permanente [(kaspersky, criptomoneda, 2021)](https://latam.kaspersky.com/resource-center/definitions/what-is-cryptocurrency?srsltid=AfmBOoowfccIdj7xjczb1Qu2csb8IM2iRTxLBh3b_nUnjbHC1JTsJQNl).
 
 ###	Beneficios de las Cripto Monedas
-1.	Descentralización: Operan sin la necesidad de intermediarios como bancos, reduciendo costos y aumentando el control individual sobre los fondos.
-2.	Transacciones rápidas y globales: Permiten enviar dinero de forma casi instantánea a cualquier parte del mundo, sin restricciones geográficas o bancarias.
-3.	Privacidad y seguridad: Ofrecen un mayor nivel de privacidad en comparación con los métodos tradicionales, aunque el grado varía según la criptomoneda. La tecnología blockchain asegura las transacciones contra alteraciones.
-4.	Accesibilidad: Cualquier persona con acceso a internet puede participar, incluso en regiones con sistemas financieros limitados.
-5.	Reducción de costos: Las tarifas de transacción suelen ser más bajas que las de los métodos tradicionales, especialmente para transferencias internacionales.
-6.	Control personal: Los usuarios son dueños absolutos de sus activos, eliminando riesgos asociados a la intervención de terceros.
-7.	Innovación tecnológica: Blockchain, la tecnología subyacente, tiene aplicaciones más allá de las criptomonedas, como contratos inteligentes, gestión de identidades, y trazabilidad.
-6.9.2.	Desventajas de las Criptomonedas
+1.	**Descentralización:** Operan sin la necesidad de intermediarios como bancos, reduciendo costos y aumentando el control individual sobre los fondos.
+2.	**Transacciones rápidas y globales:** Permiten enviar dinero de forma casi instantánea a cualquier parte del mundo, sin restricciones geográficas o bancarias.
+3.	**Privacidad y seguridad:** Ofrecen un mayor nivel de privacidad en comparación con los métodos tradicionales, aunque el grado varía según la criptomoneda. La tecnología blockchain asegura las transacciones contra alteraciones.
+4.	**Accesibilidad:** Cualquier persona con acceso a internet puede participar, incluso en regiones con sistemas financieros limitados.
+5.	**Reducción de costos:** Las tarifas de transacción suelen ser más bajas que las de los métodos tradicionales, especialmente para transferencias internacionales.
+6.	**Control personal:** Los usuarios son dueños absolutos de sus activos, eliminando riesgos asociados a la intervención de terceros.
+7.	**Innovación tecnológica:** Blockchain, la tecnología subyacente, tiene aplicaciones más allá de las criptomonedas, como contratos inteligentes, gestión de identidades, y trazabilidad.
+
+###	Desventajas de las Criptomonedas
 1.	Volatilidad: Los precios pueden fluctuar drásticamente en poco tiempo, lo que dificulta su uso como reserva de valor o medio de pago estable.
 2.	Falta de regulación: En muchos países, la falta de regulación clara puede generar incertidumbre legal y aumentar el riesgo de fraudes.
 3.	Riesgos de seguridad: Aunque el Blockchain es seguro, los usuarios pueden ser vulnerables a hackeos, estafas y pérdidas de claves privadas, lo que puede llevar a la pérdida total de los fondos.
@@ -31,6 +32,7 @@ Hay 2 forma de obtener Criptomonedas, una seria realizando una compra pasando de
 8.	Dependencia de la tecnología: Su uso requiere acceso a internet y conocimientos técnicos básicos, excluyendo a quienes carecen de estas herramientas.
 
 En Honduras el BCH y la CNBS prohíben a los bancos nacionales invertir en criptomonedas. Pero varios países, incluido el BCH de Honduras, ve como objeto de estudio y como una posible implementación de un tipo de moneda digital como las criptomonedas, pero estable.
+
 
 ##	Stablecoins
 

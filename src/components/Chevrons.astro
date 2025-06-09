@@ -1,0 +1,30 @@
+---
+
+const { titulo, detalles } = Astro.props;
+---
+
+
+<li>
+  <details
+        class="group border-s-4 border-primary bg-background-1 p-4 [&_summary::-webkit-details-marker]:hidden"
+
+      >
+        <summary class="flex items-center justify-between gap-1.5 text-white transition-colors duration-300 group-open:text-primary">
+          <h2 class="text-lg font-bold ">{ titulo }</h2>
+    
+          <svg
+            class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+    
+        <p class="pt-4 text-white">
+          { detalles }
+        </p>
+      </details>
+</li>

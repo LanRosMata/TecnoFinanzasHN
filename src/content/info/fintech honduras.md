@@ -1,7 +1,7 @@
 ---
 id: fintechHonduras
 titulo: Las Fintech en Honduras
-autor: as
+autor: Allan Rosales
 descripcion: En Honduras las Fintech están en marcadas bajo 2 normativas.
 imagen: img4.jpg
 lectura: 10
@@ -34,25 +34,3 @@ Establece los límites para las transacciones y los saldos en las billeteras ele
 -	**Resolución No.499/18-07-2024** Disposiciones de Seguridad en Billeteras Electrónicas – CNBS: 
 Establece las disposiciones de seguridad que deben cumplir las billeteras electrónicas.
 -	**Resolución No. GEE No.069/09-02-2024. CNBS:** Establece la prohibición a las instituciones supervisadas para la intermediación, inversión y transaccionalidad con criptomonedas.
-
-
-```js
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
-## Tablas
-| Nombre  | Valor |
-| ------- | ----- |
-| Docena  adaa | 12    |
-| Docena  | 12    |
-| Docena adadadd  | 12    |
-
-
-`/` codificados con `%2F` 
-` ` Espacios en blanco`%20`
-`>`  Tema importante
-
-![Engelbartjjjj](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)

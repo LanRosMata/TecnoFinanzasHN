@@ -5,7 +5,7 @@ const { titulo, descripcion, tags, imagen, url } = Astro.props;
 ---
 
 <li
-  class="border-extra-soft-white text-soft-white bg-background-1 hover:bg-soft-light rounded-xl border transition-colors duration-200"
+  class="tj-info border-extra-soft-white text-soft-white bg-background-1 hover:bg-soft-light rounded-xl border transition-colors duration-200"
 >
   <article>
     <a href={url}>
@@ -18,7 +18,7 @@ const { titulo, descripcion, tags, imagen, url } = Astro.props;
       />
       <div class="w-full">
         <div class="flex flex-col p-3">
-          <h4 class="text-3xl font-bold my-3">{titulo}</h4>
+          <h4 class="content-tit text-3xl font-bold my-3">{titulo}</h4>
           <div class="flex flex-wrap gap-2 ">
               {
                 tags?.map((tag) => (
@@ -26,7 +26,7 @@ const { titulo, descripcion, tags, imagen, url } = Astro.props;
                 ))
               }
           </div>
-          <p class="my-4">{descripcion}</p>
+          <p class="content-txt my-4">{descripcion}</p>
           <p class="text-primary font-bold mb-4">Seguir leyendo...</p>
         </div>
       </div>

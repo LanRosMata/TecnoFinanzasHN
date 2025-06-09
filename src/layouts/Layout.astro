@@ -12,9 +12,11 @@ import Footer from '../components/Footer.astro'
 		<meta name="generator" content={Astro.generator} />
 		<title>Tecno Finanzas HN</title>
 	</head>
-	<body class="min-h-screen w-full m-0 [background:radial-gradient(125%_125%_at_50%_10%,#01120D_40%,#0E2F22_100%)]">
+	<body class="flex flex-col min-h-screen w-full m-0 [background:radial-gradient(125%_125%_at_50%_10%,#01120D_40%,#0E2F22_100%)]">
 		<Header />
-		<slot />
+		<div class="flex-grow">
+			<slot />
+		</div>
 		<Footer />
 	</body>
 </html>

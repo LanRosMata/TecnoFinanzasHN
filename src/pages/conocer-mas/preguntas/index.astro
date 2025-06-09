@@ -1,0 +1,101 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import HeroGeneric from '../../../components/HeroGeneric.astro';
+import SubMenuConocerMas from '../../../components/SubMenuConocerMas.astro';
+import Chevrons from '../../../components/Chevrons.astro';
+
+---
+<Layout>
+  <HeroGeneric/>
+  <SubMenuConocerMas />
+  <main class="container mx-auto max-w-5xl my-10 px-5">
+    <section>
+      <div class="mb-6">
+        <h1 class="font-bold text-4xl">Preguntas Frecuentes</h1>
+        <div class="mt-4 mb-6">
+          <p class="text-xl">Filtrar</p>
+          <input type="text" placeholder="Buscar..." class="border border-gray-300 rounded p-2 w-full" />
+        </div>
+      </div>
+      <ul class="space-y-4">    
+        <Chevrons
+          titulo="¿Qué es la educación financiera?"
+          detalles="La educación financiera es el proceso de adquirir conocimientos y habilidades para tomar decisiones informadas sobre el manejo del dinero, incluyendo ahorro, inversión, presupuesto y planificación financiera."
+         />
+        <Chevrons
+          titulo="Medios Digitales"
+          detalles="Los medios digitales se refieren a cualquier contenido, formato o plataforma que se distribuye, procesa y visualiza a través de dispositivos electrónicos y redes de comunicación. En el contexto financiero, abarcan las plataformas online, aplicaciones móviles y sistemas que facilitan las transacciones y servicios económicos."
+         />
+        <Chevrons
+          titulo="Robo de Identidad"
+          detalles="El robo de identidad es un delito en el que un atacante obtiene y utiliza ilegalmente la información personal de otra persona, como nombres, números de seguro social, datos de tarjetas de crédito o credenciales de cuentas bancarias, para cometer fraudes, realizar compras o abrir nuevas cuentas a nombre de la víctima."
+         />
+        <Chevrons
+          titulo="¿Qué es Phishing?"
+          detalles="Es una técnica de ciberdelincuencia en la que los atacantes intentan engañar a las personas para que revelen información sensible, como nombres de usuario, contraseñas o detalles de tarjetas de crédito, haciéndose pasar por una entidad legítima y de confianza en comunicaciones electrónicas, como correos electrónicos o mensajes de texto."
+         />
+        <Chevrons
+          titulo="Doble Factor de Autenticación (2FA)"
+          detalles="Es un método de seguridad que requiere dos formas diferentes de verificación para que un usuario pueda acceder a una cuenta o realizar una transacción. Generalmente, combina algo que el usuario sabe (como una contraseña) con algo que el usuario tiene (como un código enviado a un teléfono móvil o generado por una aplicación de autenticación)."
+         />
+        <Chevrons
+          titulo="Identidad Digital "
+          detalles="Conjunto único de atributos e información que representa a una persona o entidad en el mundo en línea. Incluye datos personales, credenciales de inicio de sesión, historial de transacciones y cualquier otra huella digital que se genera al interactuar con servicios y plataformas en internet."
+         />
+        <Chevrons
+          titulo="Billetera Electrónica"
+          detalles="Una billetera electrónica (e-wallet) es una aplicación o servicio que permite a los usuarios almacenar de forma segura información de pago, como tarjetas de crédito y débito, y realizar transacciones en línea o en tiendas físicas, a menudo utilizando tecnología de pago sin contacto."
+         />
+        <Chevrons
+          titulo="Dinero Electrónico"
+          detalles="El dinero electrónico es una forma de valor monetario que se almacena y transfiere digitalmente, permitiendo realizar pagos y transferencias sin necesidad de efectivo físico. Se utiliza comúnmente en transacciones en línea y a través de dispositivos móviles."
+          />
+        <Chevrons
+          titulo="Pagos en Línea"
+          detalles="Los pagos en línea son transacciones financieras que se realizan a través de internet, permitiendo a los usuarios transferir fondos o pagar bienes y servicios utilizando plataformas web, aplicaciones móviles o pasarelas de pago. Son una forma cómoda y rápida de realizar operaciones sin necesidad de dinero en efectivo o tarjetas físicas."
+          />
+        <Chevrons
+          titulo="Pago sin Contacto"
+          detalles="El pago sin contacto es un método de pago en el que el cliente acerca una tarjeta, teléfono inteligente u otro dispositivo compatible a un terminal de pago para completar una transacción, sin necesidad de insertar la tarjeta o introducir un PIN. Utiliza tecnologías de comunicación de corto alcance como NFC."
+          />
+        <Chevrons
+          titulo="Código QR"
+          detalles="Un código QR (Quick Response code) es un tipo de código de barras bidimensional que puede almacenar una gran cantidad de información, como URLs, texto o datos de contacto. Se puede escanear rápidamente con la cámara de un smartphone o un lector específico para acceder a la información codificada o iniciar una acción."
+          />
+        <Chevrons
+          titulo="Pago con QR"
+          detalles="El pago con QR es una modalidad de pago en la que una transacción se inicia escaneando un código QR. El código puede contener la información de pago del comerciante o del cliente, agilizando el proceso de compra al conectar directamente con una billetera electrónica o una aplicación bancaria para autorizar el desembolso de fondos."
+          />
+        <Chevrons
+          titulo="NFC (Near Field Communication)"
+          detalles="NFC (Near Field Communication) es una tecnología inalámbrica de corto alcance que permite la comunicación bidireccional entre dos dispositivos cuando se encuentran muy cerca (generalmente a unos pocos centímetros). Es la base de los pagos sin contacto con tarjetas o teléfonos móviles, así como de otras aplicaciones de intercambio de datos."
+          />
+        <Chevrons
+          titulo="Link de Pago"
+          detalles="Un link de pago es una URL o enlace web que una empresa o particular envía a un cliente para que este realice un pago específico. Al hacer clic en el enlace, el cliente es dirigido a una página segura donde puede introducir sus datos de pago y completar la transacción de forma sencilla, sin necesidad de tener un carrito de compras tradicional."
+          />
+        <Chevrons
+          titulo="Transferencias ACH"
+          detalles="Las transferencias ACH (Automated Clearing House) son un sistema de red electrónica utilizado en Estados Unidos para procesar transacciones bancarias entre diferentes bancos, como transferencias directas de fondos, pagos de facturas recurrentes o nóminas. Son una forma eficiente y de bajo costo de mover dinero digitalmente, aunque con tiempos de procesamiento que pueden variar."
+          />
+        <Chevrons
+          titulo="Tokenización"
+          detalles="La tokenización es un proceso de seguridad que reemplaza datos sensibles, como los números de tarjeta de crédito, con un valor único no sensible llamado'token'. Este token no tiene valor intrínseco ni significado fuera del sistema específico que lo generó, lo que reduce el riesgo de exposición de los datos originales en caso de una brecha de seguridad."
+          />
+        <Chevrons
+          titulo="Criptomonedas"
+          detalles="Las criptomonedas son monedas digitales o virtuales que utilizan criptografía para su seguridad, lo que las hace muy difíciles de falsificar. Operan en redes descentralizadas basadas en la tecnología blockchain, lo que significa que no están sujetas al control de ningún gobierno o institución financiera central. Bitcoin y Ethereum son ejemplos populares."
+          />
+        <Chevrons
+          titulo="Blockchain"
+          detalles="Blockchain es una tecnología de registro distribuido que almacena información en bloques de datos enlazados criptográficamente en una cadena. Cada bloque contiene un registro de transacciones, y una vez que un bloque se añade a la cadena, no se puede modificar, lo que la hace una base de datos inmutable y transparente, fundamental para las criptomonedas y otras aplicaciones."
+          />
+        <Chevrons
+          titulo="Open Banking"
+          detalles="Open Banking es una práctica en la que los bancos, con el consentimiento de sus clientes, permiten a proveedores de servicios financieros de terceros acceder a sus datos financieros a través de interfaces de programación de aplicaciones (APIs) seguras. Esto fomenta la innovación y permite a los clientes tener un mayor control sobre sus datos financieros y acceder a servicios más personalizados."
+          />
+      </ul>
+    </section>
+</main>
+</Layout>
+
