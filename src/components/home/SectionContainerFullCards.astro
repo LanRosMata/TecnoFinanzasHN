@@ -23,25 +23,28 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
 
-const elementos = document.querySelectorAll(".SectionContainerFullCards");
+document.addEventListener('astro:page-load', anisSectionContainerFullcards);
 
-elementos.forEach((elemento, i) => {
-    const splitText = new SplitText(elemento, {
-			type: "words"
+function anisSectionContainerFullcards() {
+	const elementos = document.querySelectorAll(".SectionContainerFullCards");
+	elementos.forEach((elemento, i) => {
+			const splitText = new SplitText(elemento, {
+				type: "words"
+			});
+			elemento.classList.remove("invisible-content");
+			gsap.from(splitText.words, {
+				scrollTrigger: {
+					trigger: splitText.words,
+					start: "top bottom",
+					end: "bottom top",
+					toggleActions: "play none none none",
+				},
+				duration: 0.2,
+				y: 10,
+				opacity: 0,
+				stagger: 0.1
 		});
-		elemento.classList.remove("invisible-content");
-		gsap.from(splitText.words, {
-			scrollTrigger: {
-				trigger: splitText.words,
-				start: "top bottom",
-				end: "bottom top",
-				toggleActions: "play none none none",
-			},
-			duration: 0.2,
-			y: 10,
-			opacity: 0,
-			stagger: 0.1
-  });
-});
+	});
+}
 
 </script>

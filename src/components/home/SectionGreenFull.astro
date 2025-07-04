@@ -18,19 +18,21 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
-
-  const elementos = document.querySelectorAll(".sectionGreen");
-  elementos.forEach((elemento) => {
-    gsap.from(elemento, {
-      scrollTrigger: {
-        trigger: elemento,
-        start: "medium bottom",
-        end: "bottom top",
-        toggleActions: "play none none none",
-      },
-      duration: 0.5,
-      scaleY: 0,
-      ease: "power3.out",
+  document.addEventListener('astro:page-load', anisSectionGreen);
+  function anisSectionGreen() {
+    const elementos = document.querySelectorAll(".sectionGreen");
+    elementos.forEach((elemento) => {
+      gsap.from(elemento, {
+        scrollTrigger: {
+          trigger: elemento,
+          start: "medium bottom",
+          end: "bottom top",
+          toggleActions: "play none none none",
+        },
+        duration: 0.5,
+        scaleY: 0,
+        ease: "power3.out",
+      });
     });
-  });
+  }
 </script>

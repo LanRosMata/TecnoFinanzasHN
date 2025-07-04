@@ -23,24 +23,27 @@ const { titulo, descripcion, url, btText } = Astro.props;
   gsap.registerPlugin(ScrollTrigger);
 	gsap.registerPlugin(SplitText);
 
-	const elementos = document.querySelectorAll(".cardCleanAN");
-	elementos.forEach((elemento) => {
-		const splitText = new SplitText(elemento, {
-			type: "words, chars, lines"
+	document.addEventListener('astro:page-load', anisCardClean);
+	function anisCardClean(){
+		const elementos = document.querySelectorAll(".cardCleanAN");
+		elementos.forEach((elemento) => {
+			const splitText = new SplitText(elemento, {
+				type: "words, chars, lines"
+			});
+			elemento.classList.remove("invisible-content");
+			gsap.from(splitText.lines, {
+				scrollTrigger: {
+					trigger: splitText.lines,
+					start: "top bottom",
+					end: "bottom top",
+					toggleActions: "play none none none",
+				},
+				duration: 0.2,
+				y: 25,
+				opacity: 0,
+				stagger: 0.1
+			})
 		});
-		elemento.classList.remove("invisible-content");
-		gsap.from(splitText.lines, {
-			scrollTrigger: {
-				trigger: splitText.lines,
-				start: "top bottom",
-				end: "bottom top",
-				toggleActions: "play none none none",
-			},
-			duration: 0.2,
-			y: 25,
-			opacity: 0,
-			stagger: 0.1
-		})
-  });
+	}
 
 </script>

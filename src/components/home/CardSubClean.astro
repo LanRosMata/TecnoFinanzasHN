@@ -15,41 +15,42 @@ const animation = ani === "r" ? "cardSub-r" : "cardSub-l";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
-  const elementosR = document.querySelectorAll(".cardSub-r");
-  const elementosL = document.querySelectorAll(".cardSub-l");
-
-  elementosR.forEach((elemento) => {
-    gsap.from(elemento, {
-      scrollTrigger: {
-        trigger: elemento,
-        start: "bottom bottom",
-        end: "bottom top",
-        toggleActions: "play none none none",
-      },
-      duration: 1,
-      xPercent: 100,
-      autoAlpha: 0,
-      stagger: 0.2,
-      ease: "power3.out",
-      delay: 0.5,
+  document.addEventListener('astro:page-load', anisCardSubClean);
+  function anisCardSubClean() {
+    const elementosR = document.querySelectorAll(".cardSub-r");
+    const elementosL = document.querySelectorAll(".cardSub-l");
+  
+    elementosR.forEach((elemento) => {
+      gsap.from(elemento, {
+        scrollTrigger: {
+          trigger: elemento,
+          start: "bottom bottom",
+          end: "bottom top",
+          toggleActions: "play none none none",
+        },
+        duration: 1,
+        xPercent: 100,
+        autoAlpha: 0,
+        stagger: 0.2,
+        ease: "power3.out",
+        delay: 0.5,
+      });
     });
-  });
-  elementosL.forEach((elemento) => {
-    gsap.from(elemento, {
-      scrollTrigger: {
-        trigger: elemento,
-        start: "bottom bottom",
-        end: "bottom top",
-        toggleActions: "play none none none",
-      },
-      duration: 1,
-      xPercent: -100,
-      autoAlpha: 0,
-      stagger: 0.2,
-      ease: "power3.out",
-      delay: 0.5,
+    elementosL.forEach((elemento) => {
+      gsap.from(elemento, {
+        scrollTrigger: {
+          trigger: elemento,
+          start: "bottom bottom",
+          end: "bottom top",
+          toggleActions: "play none none none",
+        },
+        duration: 1,
+        xPercent: -100,
+        autoAlpha: 0,
+        stagger: 0.2,
+        ease: "power3.out",
+        delay: 0.5,
+      });
     });
-  });
+  }
 </script>
-
-<style></style>

@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { Image } from "astro:assets";
+
 
 export async function getStaticPaths() {
   const blogs = await getCollection('blog');
@@ -32,7 +34,7 @@ const relatedInfo = infos
 
 ---
 
-<Layout>
+<Layout title={titulo}>
   <main class="container mx-auto max-w-5xl my-10 px-5">
     <section class=" bg-gradient-to-r from-primary to-secondary flex flex-col lg:flex-row gap-3 lg:items-center p-10" >
       <div >
@@ -62,7 +64,15 @@ const relatedInfo = infos
         </div>
       </div>
     </section>
-    <img src={`/src/${imagen}`} alt={titulo} class="w-full h-64 object-cover mb-10 rounded-b-lg shadow-lg" />
+    <Image
+      src={`/src/${imagen}`}
+      alt=""
+      width={984}
+      height={256}
+      class="w-full h-64 object-cover mb-10 rounded-b-lg shadow-lg"
+      alt={titulo}
+      transition:name={titulo}
+    />
     <article class="prose prose-invert prose-lg max-w-none">
       <Content  />
     </article>

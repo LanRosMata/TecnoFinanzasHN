@@ -14,37 +14,42 @@ const { titulo, url, btText } = Astro.props;
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"; 
 gsap.registerPlugin(ScrollTrigger);
-const elementos = document.querySelectorAll(".cardMiniTitulo");
-elementos.forEach((elemento, i) => {
-  gsap.from(elemento, {
-    scrollTrigger: {
-      trigger: elemento,
-      start: "bottom bottom",
-      end: "bottom top",
-      toggleActions: "play none none none",
-    },
-    duration: 0.5,
-    y: 50,
-    opacity: 0,
-    delay: i * 0.3,
-    stagger: 0.2,
-    ease: "power3.out",
+
+document.addEventListener('astro:page-load', anisCardMiniTitulo);
+
+function anisCardMiniTitulo() {
+  const elementos = document.querySelectorAll(".cardMiniTitulo");
+  elementos.forEach((elemento, i) => {
+    gsap.from(elemento, {
+      scrollTrigger: {
+        trigger: elemento,
+        start: "bottom bottom",
+        end: "bottom top",
+        toggleActions: "play none none none",
+      },
+      duration: 0.5,
+      y: 50,
+      opacity: 0,
+      delay: i * 0.3,
+      stagger: 0.2,
+      ease: "power3.out",
+    });
+        const hoverAnim = gsap.to(elemento, {
+          scale: 1.1,
+          backgroundColor: "var(--color-background-1)", 
+          duration: 0.3,
+          paused: true, 
+          ease: "power2.out"
+      });
+  
+      elemento.addEventListener('mouseenter', () => {
+          hoverAnim.play(); 
+      });
+  
+  
+      elemento.addEventListener('mouseleave', () => {
+          hoverAnim.reverse();
+      });
   });
-      const hoverAnim = gsap.to(elemento, {
-        scale: 1.1,
-        backgroundColor: "var(--color-background-1)", 
-        duration: 0.3,
-        paused: true, 
-        ease: "power2.out"
-    });
-
-    elemento.addEventListener('mouseenter', () => {
-        hoverAnim.play(); 
-    });
-
-
-    elemento.addEventListener('mouseleave', () => {
-        hoverAnim.reverse();
-    });
-});
+}
 </script>
