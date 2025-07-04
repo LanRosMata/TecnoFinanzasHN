@@ -55,6 +55,6 @@ La existencia de organismos reguladores específicos como la CNBS y el BCH, que 
 
 ### Más Información
 Estos sitios te pueden brindar un enfoque más amplio:
-- [https://sde.gob.hn/proteccion-al-consumidor/](Dirección General de Protección al Consumidor)
-- [https://www.cnbs.gob.hn/reclamos/](Sección de Reclamos CNBS)
-- [https://policianacional.gob.hn/dpt-](Dirección de Investigación Policial)
+- [Dirección General de Protección al Consumidor](https://sde.gob.hn/proteccion-al-consumidor/)
+- [Sección de Reclamos CNBS](https://www.cnbs.gob.hn/reclamos/)
+- [Dirección de Investigación Policial](https://policianacional.gob.hn/)
