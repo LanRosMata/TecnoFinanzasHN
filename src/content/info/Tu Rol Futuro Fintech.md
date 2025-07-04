@@ -1,7 +1,7 @@
 ---
 id: SCfintech04
 titulo: Tu Rol en un Futuro Financiero Digital Seguro
-autor: Allan Rosales
+autor: Redacción
 descripcion: En Honduras, las autoridades trabajan para supervisar el sector financiero, incluidas las Fintech. La Comisión Nacional de Bancos y Seguros (CNBS) y el Banco Central de Honduras (BCH) son las entidades clave. Si tienes algún problema o sospechas de una actividad irregular, la Dirección General de Protección al Consumidor (DGPC) es el lugar al que puedes acudir para presentar quejas y recibir orientación, garantizando que tus derechos como usuario estén protegidos.
 imagen: img1.webp
 lectura: 10

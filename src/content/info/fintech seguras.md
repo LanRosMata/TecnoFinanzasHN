@@ -49,11 +49,3 @@ Aunque muchas son seguras, siempre hay riesgos. Algunos de los más comunes son:
 ## **Podemos decir:**
 
 Las Fintech pueden ser herramientas seguras y muy convenientes si eliges bien y tomas precauciones. Investiga la aplicación, revisa sus medidas de seguridad y, sobre todo, cuida tus datos y contraseñas. La seguridad es un trabajo en equipo entre la empresa Fintech y tú como usuario. ¡Usa la tecnología a tu favor, pero siempre con precaución!
-
----
-
-### Más Información
-Estos sitios te pueden brindar un enfoque más amplio:
-- [Link]()
-- [Link]()
-- [Link]()
