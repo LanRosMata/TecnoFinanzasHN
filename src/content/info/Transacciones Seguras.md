@@ -4,7 +4,7 @@ titulo: Transacciones Seguras, Claves para Operar con Confianza
 autor: Allan Rosales
 descripcion: Tu seguridad digital depende mucho de tus hábitos. Utilizar contraseñas fuertes y únicas para cada servicio es fundamental, y activar la autenticación de dos factores (2FA) añade una capa extra de protección a tus cuentas. Además, es importante estar siempre atento a la privacidad de tus datos, revisando qué información compartes y con quién, para evitar que caiga en manos equivocadas y mantengas el control sobre tu vida financiera en línea.
 imagen: blog/25/06/mujer-celular-seguridad.jpg
-lectura: 
+lectura: 10
 fecha: 05/06/2025
 tags: [Seguridad]
 ---
