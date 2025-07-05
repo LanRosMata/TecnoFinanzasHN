@@ -51,7 +51,7 @@ const blog = await getCollection("blog");
 
 <script>
   import searchFilter from '../../utilities/searchFilter'
-  searchFilter();
+  document.addEventListener('astro:page-load', searchFilter);
 </script>
 
 
